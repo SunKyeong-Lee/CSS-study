@@ -1,0 +1,46 @@
+/* padding 축약 표현 : top, right, bottom, left */
+.m-padding {
+    padding: 20px 50px 30px 60px;
+    background-color: yellowgreen;
+}
+
+/* 값 두개를 넣게 되면 top, right/left, bottom */
+.m-padding-xy {
+    padding: 20px 50px;
+    background-color: wheat;
+}
+
+/* 값 하나만 지정하면 모든 패딩값이 동일 */
+.m-padding-all {
+    padding: 10px;
+    background-color: thistle;
+}
+
+/* 
+    border-color 축약 표현 : top, right, bottom, left 
+    네 가지 값을 갖는 모든 속성에서 동일 순서
+*/
+.m-border {
+    border-style: solid;
+    border-width: 5px;
+    border-color: tomato cornflowerblue violet burlywood;
+}
+
+/*
+    margin값 위아래가 적요되기 위해서는
+    display값 block, inlin-block이 필요하다.
+*/
+.m-margin {
+    display: inline-block;
+    margin: 20px 50px 20px 60px;
+}
+
+/* table, div 적용 가능 */
+.m-margin-auto {
+    margin: auto;
+}
+
+.m-outline {
+    padding: 20px;
+    outline: 3px solid teal;
+}

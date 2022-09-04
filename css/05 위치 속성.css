@@ -1,0 +1,54 @@
+/* 디스플레이 */
+ul > li {
+    background-color: yellowgreen;
+}
+
+ol > li {
+    display: inline;
+    background-color: wheat;
+}
+
+/* 포지션 */
+.m-box {
+    width: 200px;
+    height: 200px;
+    background-color: cornflowerblue;
+}
+
+/* 정적 위치 */
+.m-position-static {
+    position: static;
+}
+
+/* 상대 위치 */
+.m-position-relative {
+    position: relative;
+    left: 50px;
+    top: 100px;
+}
+
+/* 고정 위치 */
+.m-box2 {
+    width: 200px;
+    height: 200px;
+    background-color: tomato;
+}
+
+.m-position-fixed {
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+/* 절대 위치 */
+.m-box3 {
+    width: 200px;
+    height: 200px;
+    background-color: yellowgreen;
+}
+
+.m-position-absoulute {
+    position: absolute;
+    top: 800px;
+    right: 0;
+}

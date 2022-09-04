@@ -1,0 +1,22 @@
+.m-box {
+    background-color: #f26e50;
+    border: 2px solid teal;
+    box-sizing: border-box;
+    width: 80%;
+    height: 100px;
+}
+
+.float-box {
+    float: left;
+    background-color: #0f6ca6;
+    width: 20%;
+    height: 200px;
+}
+
+.box-margin {
+    margin-left: 20%;
+}
+
+.float-clear {
+    clear: both;
+}

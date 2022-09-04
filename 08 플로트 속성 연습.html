@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>08 플로트 속성 연습</title>
+    <link rel="stylesheet" href="css/08 플로트 속성 연습.css">
+</head>
+<body>
+    <div class="m-box">연습을 위해 만든 div 입니다</div>
+    <div class="float-box">여기에 float : left가 적용이 되어있습니다</div>
+    <div class="m-box">이 div는 float의 영향을 받아 옆에 배치되게 됩니다</div>
+    <div class="m-box box-margin">
+        이 div는 float의 영향을 받아 옆에 배치되게 됩니다. <br>
+        margin-left로 공간을 띄워줍니다
+    </div>
+
+
+    <h2 class="float-clear">div로 float를 사용할 때 주의해야 할 점</h2>
+    <p>
+        div는 display : block이기 때문에 float로 요소들이 정렬될 때, div 요소 자체가 정렬되는게 아니라 div 안에 있는 값 또는 요소가 정렬된다. <br>
+        div 요소의 시작 위치는 그대로(너비에서 차이)이기 때문에 div의 공간을 띄우기 위해서는 두 가지 방법이 있다. <br>
+        1. margin 사용 <br>
+        2. display : inline-block 사용 <br>
+        단 inline-block 사용 시, 한 줄을 다 차지하지 않기 때문에 다른 곳에 자유롭게 위치하는 부분을 조심해야 한다
+    </p>
+</body>
+</html>

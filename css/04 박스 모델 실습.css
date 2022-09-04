@@ -1,0 +1,37 @@
+/* 책 목록 */
+.book-list {
+    background-color: #497354;
+    color: whitesmoke;
+    padding: 20px;
+    text-align: center;
+}
+
+div {
+    border: 2px dashed #3C5943;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+p {
+    background-color: #F2D3D0;
+    padding: 10px;
+}
+
+/* 버튼 누르기 */
+h1 {
+    margin-bottom: 40px;
+}
+
+a {
+    background-color: #8C654F;
+    padding: 20px 30px;
+    border-radius: 50px;
+    color: whitesmoke;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+a:hover {
+    font-style: italic;
+    background-color: #7EA1BF;
+}

@@ -1,0 +1,67 @@
+/* 실습 1 : shortcut~ */
+h2 {
+    font-family: "Blippo Blk BT";
+    text-shadow: 2px 3px 1px #D9B1A3;
+    font-size: 2em;
+}
+
+.ul-container {
+    width: 50%;
+    height: 100px;
+    background-color: #F2CBBD;
+    border: 2px solid #594740;
+    display: table;
+    margin-top: -10px;
+}
+
+.ul-box {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+ul {
+    list-style-type: circle;
+}
+
+a {
+    color: #262524;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    font-style: italic;
+}
+
+span {
+    color: tomato;
+    font-family: "문체부 제목 바탕체";
+    text-decoration: underline wavy 1px cornflowerblue;
+}
+
+/* 실습 2 : 베이징~ */
+table {
+    width: 50%;
+    background-color: #F2F2F2;
+    border-collapse: collapse;
+    text-align: center;
+    border-radius: 0 0 20px 20px;
+}
+
+.table-list {
+    background-color: #F27457;
+    border-bottom: 1px solid #594740;
+}
+
+td {
+    padding: 5px 10px;
+    border-bottom: 1px dashed #8C8C8C;
+}
+
+table tr:last-child td {
+    border: none;
+}
+
+.nation {
+    text-align: left;
+}

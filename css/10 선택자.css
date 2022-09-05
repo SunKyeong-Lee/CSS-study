@@ -1,0 +1,155 @@
+/* 자손 선택자 접근 */
+.m-parents p {
+    background-color: thistle;
+}
+
+/* 자식 선택자 접근 */
+.m-parents > p {
+    border: 3px solid crimson;
+}
+
+/* 일반 동위 선택자 */
+.m-sibling ~ p { 
+    background-color: darkorange;
+}
+
+/* 인접 동위 선택자 */
+.m-sibling + p {
+    background-color: aquamarine;
+}
+
+/* 인접 동위자 예시 */
+.test-ul {
+    background-color: wheat;
+    padding: 20px;
+    overflow: auto;
+}
+
+.test-ul li {
+    float: left;
+    list-style-type: none;
+    border-right: 1px solid black;
+    padding: 0 20px;
+}
+
+.last-li + li {
+    border: none;
+}
+
+/* 링크(a태그)에 사용하는 동적 의사 클래스 */
+a:link {color: red;}
+a:visited {color: blue;}
+a:hover {color: yellow;}
+a:active {color: green;}
+
+/* focus를 가질 수 있는 요소에 사용하는 동적 의사 클래스 */
+.focus-input:focus {
+    background-color: darkkhaki;
+}
+
+/* 체크 상태일 때, 바로 뒤에 있는 span 태그의 배경색을 바꾼다 */
+.checked-box:checked + span {
+    background-color: yellowgreen;
+}
+
+/* disabled 상태일 때, 바로 뒤에 있는 span 태그의 글자색을 바꾼다 */
+.disabled-box:disabled + span {color: tomato;}
+
+/* disabled 상태가 아닐 때(enabled) 바로 뒤에 있는 span 태그의 배경색을 바꾼다 */
+.enabled-box:enabled + span {background-color: wheat;}
+
+/* 구조 의사 클래스 */
+.table-child {
+    border-collapse: collapse;
+    width: 30%;
+}
+
+.table-child tr:first-child {
+    background-color: tomato;
+}
+
+.table-child tr td:first-child {
+    background-color: yellowgreen;
+}
+
+/* 숫자 뒤에 n을 붙이면 숫자의 배수 모두 적용 */
+/* 홀수 2n-1 */
+.table-child tr:nth-child(2n) {
+    background-color: wheat;
+}
+
+.of-type li:first-of-type {
+    background-color: thistle;
+}
+
+/* 의사 요소 */
+/* 원래 글자 크기를 em으로 볼 때 2em은 원래 글자 크기의 2배를 의미함 */
+.first-letter::first-letter {
+    font-size: 2em;
+    color: tomato;
+}
+
+.first-line::first-line {
+    color: orangered;
+}
+
+.before::before {
+    /* before를 이용해서 앞에 들어가는 내용 */
+    content: "(글자 , 이미지도 가능)";
+    /* content 안에 들어가는 내용을 꾸민다 */
+    color: yellowgreen;
+    background-color: steelblue;
+    padding: 10px;
+}
+
+.after::after {
+    /* 
+    컨텐츠에 아무 내용이 없을 때는 display값을 inline-block으로 두어 크기를 설정할 수 있게 한다 */
+    content: "";
+    background-color: sandybrown;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.selection::selection {
+    background-color: black;
+    color: aqua;
+}
+
+/* 속성 선택자 */
+input[type="button"] + span {
+    background-color: yellowgreen;
+}
+
+input[type="checkbox"] + span {
+    background-color: wheat;
+}
+
+input[type="radio"] + span {
+    color: tomato;
+}
+
+/* 
+    기타 의사 클래스 not
+    not 의사 클래스는 앞에 요소를 붙여서 지정하지 않고
+    괄호 안에 제외할 태그나 선택자를 입력한다
+*/
+body :not(p) {
+    color: teal;
+}
+
+.not :not(p) {
+    color: purple;
+}
+
+/* 특정 요소의 클래스 */
+.color {
+    color: orange;
+}
+
+h1.color {
+    color: darkorchid;
+}

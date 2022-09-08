@@ -1,0 +1,75 @@
+/* ul, ol 태그를 만들어서 ol 태그의 li만 백그라운드 컬러색 추가 */
+.test-li ol > li {
+    background-color: wheat;
+}
+
+/* 
+input type:text에 의사클래스 중 focus를 사용해서 
+글자 두께를 두껍게하고 글자색 바꾸기 
+*/
+.test-input:focus {
+    color: tomato;
+    font-weight: bold;
+}
+
+/* list의 숫자값을 없애고, input:checked일 때 span에 취소줄 생성하기 */
+.list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.list li input:checked + span {
+    text-decoration: line-through;
+}
+
+/* ol리스트를 만들어서 짝수 li의 백그라운드 컬러를 바꾸기 */
+.li-background li:nth-child(2n) {
+    background-color: yellowgreen;
+}
+
+
+/* 선택자를 이용하여 div로 나눠진 태그들 따로 선택 */
+.main-content {
+    border: 3px solid tomato;
+}
+
+.main-content ul {
+    list-style-type: none;
+}
+
+.main-content ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.tag ul {
+    list-style-type: none;
+    float: right;
+    padding: 0;
+    margin: 0;
+}
+
+.tag li {
+    float: left;
+    background-color: cornflowerblue;
+    padding: 10px 20px;
+    border-radius: 30px;
+    margin: 10px 10px;
+}
+
+/* 의사 클래스 활용하기 */
+.clear-both {
+    clear: both;
+}
+
+.notice p::after {
+    content: "N";
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    text-align: center;
+    background-color: orange;
+    color: whitesmoke;
+    border-radius: 50%;
+    margin-left: 5px;
+}

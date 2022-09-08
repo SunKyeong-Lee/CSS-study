@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11 선택자 실습</title>
+    <link rel="stylesheet" href="css/11 선택자 실습.css">
+</head>
+<body>
+    <h1>선택자 실습</h1>
+    <!-- ul, ol 태그를 만들어서 ol 태그의 li만 백그라운드 컬러색 추가 -->
+    <div class="test-li">
+        <ul>
+            <li>ul의 리스트입니다</li>
+            <li>ul의 리스트입니다</li>
+        </ul>
+        <ol>
+            <li>ul의 리스트입니다</li>
+            <li>ul의 리스트입니다</li>
+        </ol>
+    </div>
+
+    <!--
+        input type:text에 의사클래스 중 focus를 사용해서 
+        글자 두께를 두껍게하고 글자색 바꾸기 
+    -->
+    <hr>
+    <input type="text" class="test-input"> focus되면 글자색과 두께가 바뀝니다 
+
+    <!-- list의 숫자값을 없애고, input:checked일 때 span에 취소줄 생성하기 -->
+    <hr>
+    <ol class="list">
+        <li><input type="checkbox"><span>내용1</span></li>
+        <li><input type="checkbox"><span>내용2</span></li>
+    </ol>
+
+    <!-- ol리스트를 만들어서 짝수 li의 백그라운드 컬러를 바꾸기 -->
+    <hr>
+    <ol class="li-background">
+        <li>내용1</li>
+        <li>내용2</li>
+        <li>내용3</li>
+        <li>내용4</li>
+        <li>내용5</li>
+    </ol>
+
+    <!-- 실습 1 -->
+    <hr>
+    <h2>선택자를 이용하여 div로 나눠진 태그들 따로 선택</h2>
+    <div class="main-content">
+        <p>색을 누르면 사전으로 넘어갑니다</p>
+        <ul>
+            <li><a href="">빨강</a></li>
+            <li><a href="">파랑</a></li>
+            <li><a href="">노랑</a></li>
+        </ul>
+    </div>
+    <div class="tag">
+        <ul>
+            <li>#네이버</li>
+            <li>#사전</li>
+            <li>#색</li>
+        </ul>
+    </div>
+    
+    <!-- 실습 2 -->
+    <hr class="clear-both">
+    <h2>의사 클래스 활용하기</h2>
+    <h3>공지</h3>
+    <div class="notice">
+        <p>새로운 알림입니다</p>
+        <p>새로운 알림입니다</p>
+        <p>새로운 알림입니다</p>
+        <p>새로운 알림입니다</p>
+    </div>
+</body>
+</html>

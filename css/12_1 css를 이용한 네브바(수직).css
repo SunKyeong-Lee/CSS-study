@@ -1,0 +1,60 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+/* 세로 전체를 하기 위해서는 부모도 height를 100%로 설정해야함 */
+html, body {
+    height: 100%;
+}
+
+ul {
+    margin: 0;
+    padding-inline-start: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+.main {
+    background-color: #F2F2F2;
+    height: 100%;
+}
+
+/* 메뉴 */
+.gnb {
+    background-color: #0D0D0D;
+    width: 200px;
+    height: 100%;
+    float: left;
+    overflow: auto;
+}
+
+.gnb li a {
+    /* display:block; - li의 크기가 a의 크기에 맞춰짐 */
+    display: block;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    color: #F2F2F2;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.gnb > ul > li > a {
+    padding: 0 10px;
+    border-bottom: 1px solid #F2F2F2;
+    margin-top: 40px;
+}
+
+/* 서브 메뉴 */
+.g-sub a {
+    padding-left: 30px;
+}
+
+/* 호버 */
+.g-sub a:hover {
+    background-color: #8C7472;
+    font-weight: bold;
+}

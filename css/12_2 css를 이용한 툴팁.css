@@ -1,0 +1,85 @@
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltip-content {
+    visibility: hidden;
+    background-color: tomato;
+    padding: 10px 20px;
+}
+
+.tooltip:hover .tooltip-content {
+    visibility: visible;
+}
+
+.tooltip:hover p {
+    font-weight: bold;
+}
+
+/* 툴팁 위치 설정 */
+.tooltip-container {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.tooltip-position {
+    position: relative;
+    display: inline-block;
+    margin: auto;
+}
+
+.tooltip-position .tooltip-content2 {
+    visibility: hidden;
+    background-color: yellowgreen;
+    width: 300px;
+    padding: 10px 0;
+    position: absolute;
+    top: -10px;
+    right: 110%;
+}
+
+.tooltip-position:hover .tooltip-content2 {
+    visibility: visible;
+}
+
+.tooltip-position:hover > p {
+    font-weight: bold;
+}
+
+/* 말풍선 모양의 툴팁 */
+.tooltip-bubble {
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    margin: 80px 100px;
+}
+
+.tooltip-bubble .tooltip-content3 {
+    visibility: hidden;
+    background-color: cornflowerblue;
+    width: 300px;
+    padding: 10px 0;
+    position: absolute;
+    top: -150%;
+    margin-left: -70px;
+}
+
+/* 말풍선 꼬리 만들기 */
+.tooltip-bubble .tooltip-content3::after{
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 47%;
+    border-width: 10px;
+    border-style: solid;
+    border-color: cornflowerblue transparent transparent transparent;
+}
+
+.tooltip-bubble:hover .tooltip-content3 {
+    visibility: visible;
+}
+
+.tooltip-bubble:hover > p {
+    font-weight: bold;
+}

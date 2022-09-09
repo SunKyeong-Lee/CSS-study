@@ -1,76 +1,80 @@
 body {
-    margin: 0;
     padding: 0;
+    margin: 0;
+}
+
+ul {
+    margin: 0;
+    padding-inline-start: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
 }
 
 .header {
     height: 600px;
-    background-color: #203F59;
+    background-color: #393E59;
 }
 
-/* 네브바 내부 컨텐츠 수직 중앙 정렬 */
+/* 메뉴 */
 .gnb {
-    width: 100%;
+    background-color: #010326;
+    overflow: auto;
+}
+
+.gnb > ul > li > a {
+    float: left;
     height: 80px;
-    background-color: #011640;
+    padding: 0 50px;
     display: flex;
     align-items: center;
-    position: relative;
-}
-
-/* 메뉴123 - 한 줄 정렬 */
-.gnb > ul {
-    float: left;
-    list-style-type: none;
-    padding: 50px;
-}
-
-/* 메뉴123 - 링크 꾸미기 */
-.gnb > ul > li > a {
-    text-decoration: none;
-    color: #F2F2F2;
+    color: #F0F2F2;
 }
 
 /* 서브 메뉴 */
 .g-sub {
-    /* display:none은 마지막에 넣기 */
-    /* display: none; */
-    list-style-type: none;
-    width: 141px;
-    padding-left: 0;
-    background-color: #F2F2F2;
-    text-align: center;
+    display: none;
+    overflow: auto;
     position: absolute;
     top: 80px;
+    background-color: #F0F2F2;
 }
 
-/* 서브 메뉴 위치 조정 (absolute) */
 .sub1 {left: 0;}
 .sub2 {left: 140.81px;}
-.sub3 {left: 281.61px;}
+.sub3 {left: 281.62px;}
 
-.g-sub li {
-    padding: 8px 0;
-    border-bottom: 1px solid rgba(32, 63, 89, 0.2);
-}
-
-.g-sub li:last-child {
-    border-bottom: none;
-}
-
-.g-sub a {
-    padding: inherit;
-    box-sizing: border-box;
-    color: #8C7472;
-    text-decoration: none;
-}
-
-.g-sub a:hover {
-    background-color: #8C7472;
-    color: #F2F2F2;
-}
-
-/* 메뉴에 커서를 올리면 서브 메뉴 나타남 */
-.gnb > ul:hover .g-sub {
+.g-sub li > a {
+    /* display:block; - li의 크기가 a의 크기에 맞춰짐 */
     display: block;
+    text-align: center;
+    width: 140.81px;
+    box-sizing: border-box;
+    padding: 10px 20px;
+    border-bottom: 1px dashed #393e596e;
+    color: #010326;
+}
+
+.g-sub li a:last-child {
+    border: none;
+}
+
+/* 호버했을 때 서브 메뉴 보이기 */
+.gnb > ul > li:hover .g-sub {
+    display: block;
+}
+
+.gnb > ul > li > a:hover {
+    background-color: #6FBFBF;
+}
+
+.g-sub li:hover a {
+    background-color: #82D9D9;
+    color: #393E59;
+    font-weight: bold;
 }

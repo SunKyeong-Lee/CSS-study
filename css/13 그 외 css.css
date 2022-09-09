@@ -1,0 +1,56 @@
+@import url(reset.css);
+
+@font-face {
+    font-family: 'RixInooAriDuriR';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2207-01@1.0/RixInooAriDuriR.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* form 요소의 디자인 */
+table {
+    display: inline-block;
+}
+
+table > tr, td {
+    padding: 3px 5px;
+}
+
+form {
+    border: 2px solid black;
+    text-align: center;
+    padding: 10px;
+    background-color: #BFB6AE;
+    margin: 10px;
+}
+
+td > input {
+    height: 25px;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #D95F80;
+    background-color: #F2F2F2;
+    box-sizing: border-box;
+}
+
+td > input:focus {
+    background-color: #595959;
+    color: #F2F2F2;
+}
+
+input[type="submit"] {
+    width: 80px;
+    height: 30px;
+    background-color: #595959;
+    color: #F2F2F2;
+    border: 0;
+    box-shadow: 0 0 5px black inset;
+    border-radius: 20px;
+}
+
+/* font-face */
+h1 {
+    font-size: 30px;
+    font-family: "RixInooAriDuriR";
+    margin: 20px 10px;
+}

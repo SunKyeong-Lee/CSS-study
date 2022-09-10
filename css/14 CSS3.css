@@ -1,0 +1,238 @@
+/* 색 */
+.color {
+    background: black;
+    color: white;
+    padding: 10px;
+}
+
+.color-rgba {background-color: rgba(255, 99, 71, 0.3);}
+.color-hsl {background-color: hsl(80, 46%, 49%);}
+.color-hsla {background-color: rgba(50, 174, 205, 0.384);}
+.color-opacity {
+    background-color: violet;
+    opacity: 0.3;
+}
+
+/* 선형 그라디언트 */
+.m-box {
+    width: 80%;
+    height: 200px;
+    background-color: black;
+    margin-bottom: 10px;
+}
+
+/* 선형 그라디언트 - 기본 위에서 아래로 */
+.linear-gradient1 {
+    background: -webkit-linear-gradient(#18D7DD, #EC726B);
+    background: -moz-linear-gradient(#18D7DD, #EC726B);
+    background: -o-linear-gradient(#18D7DD, #EC726B);
+    background: linear-gradient(#18D7DD, #EC726B);
+}
+
+/* 선형 그라디언트 - 오른쪽에서 왼쪽으로 */
+.linear-gradient2 {
+    background: -webkit-linear-gradient(right, #18D7DD, #EC726B);
+    background: -moz-linear-gradient(right, #18D7DD, #EC726B);
+    background: -o-linear-gradient(right, #18D7DD, #EC726B);
+    background: linear-gradient(to left, #18D7DD, #EC726B);
+}
+
+/* 선형 그라디언트 - 왼쪽 아래에서 오른쪽 위로 */
+.linear-gradient3 {
+    background: -webkit-linear-gradient(left bottom, #18D7DD, #EC726B);
+    background: -moz-linear-gradient(left bottom, #18D7DD, #EC726B);
+    background: -o-linear-gradient(left bottom, #18D7DD, #EC726B);
+    background: linear-gradient(to top right, #18D7DD, #EC726B);
+}
+
+/* 선형 그라디언트 - 각도 */
+.linear-gradient4 {
+    background: -webkit-linear-gradient(150deg, #18D7DD, #EC726B);
+    background: -moz-linear-gradient(150deg, #18D7DD, #EC726B);
+    background: -o-linear-gradient(150deg, #18D7DD, #EC726B);
+    background: linear-gradient(150deg, #18D7DD, #EC726B);
+}
+
+/* 선형 그라디언트 - 투명도 */
+.linear-gradient5 {
+    background: -webkit-linear-gradient(left, rgba(0,255,0,1), rgba(0, 255, 0, 0.2));
+    background: -moz-linear-gradient(left, rgba(0,255,0,1), rgba(0, 255, 0, 0.2));
+    background: -o-linear-gradient(left, rgba(0,255,0,1), rgba(0, 255, 0, 0.2));
+    background: linear-gradient(to right, rgba(0,255,0,1), rgba(0, 255 , 0, 0.2));
+}
+
+/* 원형 그라디언트 */
+.radial-gradient1 {
+    background: -webkit-radial-gradient(#FF9648, #1DB06C);
+    background: -moz-radial-gradient(#FF9648, #1DB06C);
+    background: -o-radial-gradient(#FF9648, #1DB06C);
+    background: radial-gradient(#FF9648, #1DB06C);
+}
+
+/* 원형 그라디언트 - 색상 지정점 사이의 간격 조절 */
+.radial-gradient2 {
+    background: -webkit-radial-gradient(#FF9648 40%, #1DB06C 40%);
+    background: -moz-radial-gradient(#FF9648 40%, #1DB06C 40%);
+    background: -o-radial-gradient(#FF9648 40%, #1DB06C 40%);
+    background: radial-gradient(#FF9648 40%, #1DB06C 40%);
+}
+
+/* 원형 그라디언트 - 타원(기본)에서 원 모양으로 */
+.radial-gradient3 {
+    background: -webkit-radial-gradient(circle, #FF9648 40%, #1DB06C 40%);
+    background: -moz-radial-gradient(circle, #FF9648 40%, #1DB06C 40%);
+    background: -o-radial-gradient(circle, #FF9648 40%, #1DB06C 40%);
+    background: radial-gradient(circle, #FF9648 40%, #1DB06C 40%);
+}
+
+/* 원형 그라디언트 - 크기 설정 */
+.container {
+    width: 700px;
+}
+
+h3 {
+    display: inline-block;
+    width: 300px;
+    margin: 0 10px;
+}
+
+.m-box2 {
+    height: 300px;
+    width: 300px;
+    background: black;
+    margin: 10px;
+    display: inline-block;
+}
+
+.closest-side {
+    background: -webkit-radial-gradient(32% 35%, closest-side, yellow, #FF9648, #23074d);
+    background: -moz-radial-gradient(25% 35%, closest-side, yellow, #FF9648, #23074d);
+    background: -o-radial-gradient(25% 35%, closest-side, yellow, #FF9648, #23074d);
+    background: radial-gradient(closest-side at 25% 35%, yellow, #FF9648, #23074d);
+}
+
+.farthest-side {
+    background: -webkit-radial-gradient(20% 25%, farthest-side, yellow, #FF9648, #23074d);
+    background: -moz-radial-gradient(20% 25%, farthest-side, yellow, #FF9648, #23074d);
+    background: -o-radial-gradient(20% 25%, farthest-side, yellow, #FF9648, #23074d);
+    background: radial-gradient(farthest-side at 20% 25%, yellow, #FF9648, #23074d);
+}
+
+.closest-corner {
+    background: -webkit-radial-gradient(25% 35%, closest-corner, yellow, #FF9648, #23074d);
+    background: -moz-radial-gradient(25% 35%, closest-corner, yellow, #FF9648, #23074d);
+    background: -o-radial-gradient(25% 35%, closest-corner, yellow, #FF9648, #23074d);
+    background: radial-gradient(closest-corner at 25% 35%, yellow, #FF9648, #23074d);
+}
+
+.farthest-corner {
+    background: -webkit-radial-gradient(20% 25%, farthest-corner, yellow, #FF9648, #23074d);
+    background: -moz-radial-gradient(20% 25%, farthest-corner, yellow, #FF9648, #23074d);
+    background: -o-radial-gradient(20% 25%, farthest-corner, yellow, #FF9648, #23074d);
+    background: radial-gradient(farthest-corner at 20% 25%, yellow, #FF9648, #23074d);
+}
+
+.m-box3 {
+    width: 80%;
+    height: 200px;
+}
+
+.r-grad {
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.6) 40%, #f7797d 50%);
+}
+
+.m-background {
+    width: 80%;
+    height: 200px;
+    background-color: #1DB06C;
+}
+
+.m-frame {
+    /* static 포지션의 위치에서 이동 */
+    position: absolute;
+    margin-top: -200px;
+
+    /*
+    position: relative;
+    top: 100px
+    */
+}
+
+/* 그림자 효과 */
+.text-shadow > p > span:first-child {
+    text-shadow: 2px 3px 2px tomato;
+}
+
+.text-shadow > p > span:last-child {
+    text-shadow: 0 0 3px cornflowerblue;
+}
+
+.box-shadow {
+    width: 250px;
+    height: 150px;
+    background-color: wheat;
+    box-shadow: 5px 7px 2px tomato;
+    margin-bottom: 20px;
+}
+
+/* 배경 이미지 */
+.m-box4 {
+    width: 100%;
+    height: 500px;
+}
+
+.box-img {
+    /* 맨 처음에 명시된 이미지가 가장 위에 보인다 */
+    background-image: url(/img/food_img.jpg), url(/img/image01.jpg);
+    background-size: 30%, auto;
+    background-position: right top, left;
+    background-repeat: no-repeat, repeat;
+}
+
+/* 텍스트 */
+.m-textbox {
+    width: 100px;
+    height: 100px;
+    background-color: wheat;
+    margin-bottom: 10px; 
+    overflow: hidden;
+}
+
+.t-overflow-clip {
+    text-overflow: clip;
+}
+
+.t-overflow-ellipsis {
+    text-overflow: ellipsis;
+}
+
+.t-overflow-clip:hover, .t-overflow-ellipsis:hover {
+    overflow: visible;
+}
+
+.t-box {
+    width: 100px;
+    height: 100px;
+    background-color: thistle;
+    margin-bottom: 10px;
+}
+
+.head3 {
+    margin-left: 0;
+    margin-bottom: 5px;
+}
+
+.english-overflow1 {
+    word-break: break-all;
+}
+
+.english-overflow2 {
+    white-space: nowrap;
+}
+
+/*
+.korean-overflow {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+*/

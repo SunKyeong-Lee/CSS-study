@@ -1,0 +1,154 @@
+@import url(./reset.css);
+
+a {text-decoration: none;}
+
+/* 콘텐츠 양에 상관없이 푸터 하단 고정을 위해 설정 */
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* 헤더 */
+.header {
+    min-height: 100px;
+    background-color: #011640;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header h1 {
+    color: #F2F2F2;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+/* 네브 */
+.nav ul {
+    display: flex;
+    justify-content: space-around;
+    background-color: #F2F2F2;
+    padding: 20px;
+}
+
+.nav a {
+    color: #011640;
+    font-weight: bold;
+}
+
+.nav a:hover {
+    color: #8C7472;
+    text-shadow: 0 0 3px #8C7472;
+}
+
+/* 메인 */
+.main > div {
+    border: 1px solid #0D0D0D;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.main {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 10px;
+    margin: 10px;
+}
+
+.banner-conatiner {
+    grid-row: 1/3;
+    display: grid;
+    grid-template-rows: minmax(auto, max-content);
+    grid-gap: 10px;
+}
+
+.banner-conatiner img {
+    width: 100%;
+}
+
+.banner {
+    background-color: #F2F2F2;
+    min-height: 100px;
+}
+
+.news, .notice {
+    grid-column: 2/4;
+    min-height: 180px;
+}
+
+.main h2 {
+    font-weight: bold;
+    border-bottom: 1px dashed #8C7472;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+}
+
+.news p {
+    line-height: 130%;
+}
+
+.news a {
+    display: block;
+    margin-top: 10px;
+    color: #3c91d6;
+}
+
+.news a:hover {
+    font-weight: bold;
+}
+
+.notice ul li a {
+    display: block;
+    padding: 5px 0;
+    color: black;
+}
+
+.notice ul li a::after {
+    content: "N";
+    display: inline-block;
+    background-color: #8C7472;
+    border-radius: 3px;
+    color: #F2F2F2;
+    font-size: 10px;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+    width: 15px;
+    height: 15px;
+    margin-left: 5px;
+}
+
+.notice ul li a:hover {
+    color: #011640;
+    font-weight: bold;
+}
+
+/* 푸터 */
+.footer {
+    background-color: #949ba1;
+    color: #0D0D0D;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* 미디어 쿼리 */
+@media screen and (max-width:567px) {
+    .banner-conatiner {
+        grid-column: 1/4;
+        grid-row: 1;
+    }
+
+    .news, .notice {
+        grid-column: 1/4;
+    }
+
+}

@@ -1,0 +1,41 @@
+.m-box {
+    width: 200px;
+    height: 200px;
+    background-color: tomato;
+}
+
+/* 이동 */
+.translate {
+    translate: 100px 100px;
+}
+
+.m-box2 {
+    width: 200px;
+    height: 200px;
+    background-color: cornflowerblue;
+}
+
+.m-box2 p {
+    position: relative;
+    top: 100px;
+}
+
+/* 회전, 크기, 기울기 */
+.rotate {
+    rotate: 30deg;
+}
+
+.scale {
+    scale: 0.7;
+}
+
+.skew {
+    transform: skew(-20deg);
+}
+
+/*
+아래 결과물 확인 불편해서 주석 처리함
+.matrix {
+    transform: matrix(1.0, 2.0, 3.0, 4.0, 5.0, 6.0);
+}
+*/

@@ -1,0 +1,68 @@
+@import url(./reset.css);
+
+.header {
+    background-color: #73665F;
+    color: #F2F2F2;
+    font-size: 30px;
+    padding: 20px;
+    text-align: center;
+}
+
+.gnb {
+    border-top: 2px solid #F25270;
+    border-bottom: 2px solid #F25270;
+    padding: 10px 60px;
+    overflow: auto;
+}
+
+.gnb > ul > li {
+    float: left;
+    margin: 0 5px;
+}
+
+.main-container {
+    width: 100%;
+    height: 800px;
+}
+
+.main-container .main {
+    width: 800px;
+    height: inherit;
+    background-color: #F2F2F2;
+    overflow: hidden;
+    margin: auto;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+.main-container .main-section {
+    width: 300px;
+    height: 200px;
+    border: 3px solid #73665F;
+    float: left;
+}
+
+.main-container .main-section:first-child {
+    margin-right: 50px;
+}
+
+.main-container .main-section .section-img {
+    width: 200px;
+}
+
+.footer {
+    padding: 10px 20px;
+}
+
+.footer ul li {
+    float: left;
+}
+
+.footer ul li ~ li::before {
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 14px;
+    background-color: gray;
+    margin: 0 5px;
+}

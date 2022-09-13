@@ -1,16 +1,7 @@
 @import url(./reset.css);
 
+body {line-height: 1;}
 a {text-decoration: none;}
-
-/* 콘텐츠 양에 상관없이 푸터 하단 고정을 위해 설정 */
-html, body {
-    height: 100%;
-}
-
-body {
-    display: flex;
-    flex-direction: column;
-}
 
 /* 헤더 */
 .header {
@@ -53,7 +44,6 @@ body {
 }
 
 .main {
-    flex: 1;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
@@ -142,13 +132,16 @@ body {
 
 /* 미디어 쿼리 */
 @media screen and (max-width:567px) {
+    .main {
+        grid-template-columns: none;
+        grid-template-rows: auto;
+    }
+
     .banner-conatiner {
-        grid-column: 1/4;
         grid-row: 1;
     }
 
     .news, .notice {
-        grid-column: 1/4;
+        grid-column: 1;
     }
-
 }

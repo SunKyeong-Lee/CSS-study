@@ -1,0 +1,150 @@
+.m-box {
+    width: 200px;
+    height: 200px;
+    background-color: tomato;
+}
+
+/* 이동 */
+.translate {
+    translate: 100px 100px;
+}
+
+.m-box2 {
+    width: 200px;
+    height: 200px;
+    background-color: cornflowerblue;
+}
+
+.m-box2 p {
+    position: relative;
+    top: 100px;
+}
+
+/* 회전, 크기, 기울기 */
+.rotate {
+    rotate: 30deg;
+}
+
+.scale {
+    scale: 0.7;
+}
+
+.skew {
+    transform: skew(-20deg);
+}
+
+/*
+아래 결과물 확인 불편해서 주석 처리함
+.matrix {
+    transform: matrix(1.0, 2.0, 3.0, 4.0, 5.0, 6.0);
+}
+*/
+
+/* 전환 */
+.t-box {
+    width: 100px;
+    height: 100px;
+    background-color: cornflowerblue;
+}
+
+/* 너비, 높이, 색 전환 */
+.transition-width { 
+    transition: width 1s; 
+}
+
+.transition-width:hover { 
+    width: 200px;
+    transition-duration: 1.5;
+}
+
+.transition-height { 
+    transition: height 1s; 
+}
+
+.transition-height:hover {
+    height: 200px;
+    transition-duration: 0.5s;
+}
+
+.transition-color { 
+    transition: background-color 1s, border-radius 1s;
+}
+.transition-color:hover {
+    background-color: yellowgreen;
+    transition-duration: 0.5s;
+    border-radius: 50%;
+}
+
+/* 변형과 함께 쓰는 전환 */
+.transition-transform {
+    transition: transform 1s;
+}
+
+.transition-transform:hover {
+    transform: scale(1.5) translate(100px, 0) rotate(90deg);
+}
+
+/* 딜레이 속성 */
+.transition-delay {
+    transition: opacity 1s;
+    transition-delay: 2s;
+}
+
+.transition-delay:hover {
+    opacity: 0;
+}
+
+.transition-delay-input {
+    transition: background-color 1ms;
+    /* 
+    딜레이와 듀레이션은 시작할 때 값을 하나만 주면 
+    전환 시작/끝의 딜레이와 듀레이션이 동일하게 들어간다.
+    원한다면 값을 따로 줄 수 있다.
+    */
+}
+
+.transition-delay-input:hover {
+    background-color: yellowgreen;
+    transition-duration: 1s;
+    transition-delay: 1s;
+}
+
+/* 전환 효과의 속도 */
+.container {
+    width: 500px;
+    display: inline-block;
+    border-right: 1px solid black;
+}
+
+.linear {
+    transition: transform 2s;
+    transition-timing-function: linear;
+}
+
+.ease {
+    transition: transform 2s;
+    transition-timing-function: ease;
+}
+
+.ease-in {
+    transition: transform 2s;
+    transition-timing-function: ease-in;
+}
+
+.ease-out {
+    transition: transform 2s;
+    transition-timing-function: ease-out;
+}
+
+.ease-in-out {
+    transition: transform 2s;
+    transition-timing-function: ease-in-out;
+}
+
+.container:hover .linear, 
+.container:hover .ease, 
+.container:hover .ease-in, 
+.container:hover .ease-out, 
+.container:hover .ease-in-out {
+    transform: translateX(500px);
+}

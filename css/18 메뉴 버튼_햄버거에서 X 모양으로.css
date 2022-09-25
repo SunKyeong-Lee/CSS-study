@@ -1,0 +1,103 @@
+/* 메뉴 버튼 : 햄버거에서 X 모양으로 */
+/* <input type=checkbox>의 체크박스가 보이지 않게 */
+input[id=trigger] {
+    display: none;
+}
+
+/* 메뉴 버튼 크기 설정, 마우스 커서 올리면 커서 모양이 바뀌게 */
+label[for=trigger] {
+    /* 
+    작업할 때 쉽게 확인하기 위해 임시로 설정
+    border: 1px solid tomato;
+    */
+    display: block;
+    width: 40px;
+    height: 30px;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;   /* 메뉴 버튼이 사이드바 위에 보이게 하기 위해 */
+    transition: all 0.3s;
+}
+
+/* 햄버거 세줄 표현 */
+label[for=trigger] > span {
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: black;
+    border-radius: 30px;
+    position: absolute;
+    /* 
+    position 속성이 부모 요소가 relative, 자식 요소가 absolute일 경우
+    자식 요소는 body 영역이 아닌 부모 영역 안에서 움직이게 된다.
+    */
+    transition: all 0.3s;
+}
+
+/* 햄버거 세줄 각 위치 조정 */
+label[for=trigger] > span:nth-child(1) {
+    top: 0;
+}
+
+label[for=trigger] > span:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);   /* 자기 크기의 50%만큼 위로 이동 */
+}
+
+label[for=trigger] > span:nth-child(3) {
+    bottom: 0;
+}
+
+/* 메뉴 버튼을 클릭하면 나타날 사이드바 */
+.container {
+    /* 위에 다른 실습물들이 있어 relative(부모) - absolute(자식) 사용 */
+    position: relative;
+}
+
+.side-menu {
+    width: 250px;
+    height: 500px;
+    background-color: wheat;
+    box-sizing: border-box;
+    padding: 70px 10px;
+    /* 스크롤과 무관한 위치 설정을 하고 싶다면 position : fixed 로 */
+    position: absolute;
+    top: -20px;
+    left: -258px;   /* 사이드바 넓이 250px + <body> margin 8px */
+    z-index: 1;   /* 메뉴 버튼이 사이드바 위에 보이게 하기 위해 */
+    transition: all 0.3s;
+}
+
+/* 메뉴 버튼을 클릭하면 X 모양으로 변경 */
+input[id=trigger]:checked + label > span:nth-child(1) {
+    top: 42%;
+    /*
+    50% 설정하니 높이가 중앙 위치 안되서 42%로 조절
+    top : 50%;
+    transform: translateY(-50%);
+    */
+    transform: rotate(45deg);
+}
+
+input[id=trigger]:checked + label > span:nth-child(2) {
+    opacity: 0;
+}
+
+input[id=trigger]:checked + label > span:nth-child(3) {
+    top: 42%;
+    /*
+    top : 50%;
+    transform: translateY(-50%);
+    */
+    transform: rotate(-45deg);
+}
+
+/* 메뉴 버튼을 클릭하면 사이드바가 나옴 */
+input[id=trigger]:checked ~ .side-menu {
+    left: -8px;   /* <body> margin 8px */
+}
+
+/* 나타나는 사이드바에 따라 메뉴 버튼 이동 */
+input[id=trigger]:checked + label[for=trigger] {
+    transform: translateX(180px);
+}

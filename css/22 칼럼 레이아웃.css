@@ -1,0 +1,13 @@
+.main {
+    width: 100%;
+    background-color: wheat;
+}
+
+.colums {
+    column-count: 3;
+    column-rule-style: dashed;
+    column-rule-color: tomato;
+    column-rule-width: 2px;
+    column-gap: 40px;
+    column-fill: auto;
+}
